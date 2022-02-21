@@ -5,19 +5,20 @@ import React from 'react';
 
 
 
-const onSuccess = () => {
+
+function LogoutBtn({userAuthToggle}) {
+
+  const onSuccess = () => {
     console.log("Log out success!");
-}
+    userAuthToggle(false, null);
+  }
 
-
-function LogoutBtn()  {
   return (
       <div>
           <GoogleLogout
             clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
             buttonText={"LogOut"}
             onLogoutSuccess={onSuccess}
-            
           />
       </div>
   )};

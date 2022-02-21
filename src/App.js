@@ -43,7 +43,6 @@ function App() {
           </AppBar>
           <Routes>
             <Route path="/" exact element={<Home/>}></Route>
-            {/* <Route path="/login" exact element={<Login/>}></Route> */}
             <Route path="/user" exact element={<User/>}></Route>
           </Routes>
         </Router>
